@@ -120,3 +120,42 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+#services {
+    margin: 34px;
+    display: flex;
+}
+
+#services .box img {
+    height: 460px;
+    display: block;
+    margin: auto;
+}
+
+
+/* .h-primary {
+    font-size: 3.8rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}
+
+.h-secondary {
+    font-size: 2.3rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+}*/
+
+.cen {
+    text-align: center;
+} 
+
+#services .box p {
+    padding: 5%;
+    margin: 15%;
+}
