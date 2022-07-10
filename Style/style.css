@@ -1,5 +1,11 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 
@@ -121,25 +127,49 @@
     transform: translate(-50%, -50%);
 }
 
+
+/* footer */
+
 footer {
     background: black;
     color: white;
     padding: 9px 20px;
 }
 
+
+/* Options section */
+
 #services {
     margin: 34px;
     display: flex;
 }
 
+#services .box {
+    /* border: 6px solid #0119fb; */
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background: rgb(188, 237, 242);
+}
+
 #services .box img {
-    height: 460px;
+    height: 160px;
     display: block;
     margin: auto;
 }
 
+.cen {
+    text-align: center;
+}
 
-/* .h-primary {
+#services .box p {
+    font-family: 'Bree Serif', serif;
+}
+
+
+/* utility class */
+
+.h-primary {
     font-size: 3.8rem;
     padding: 12px;
     font-family: 'Bree Serif', serif;
@@ -149,13 +179,484 @@ footer {
     font-size: 2.3rem;
     padding: 12px;
     font-family: 'Bree Serif', serif;
-}*/
+}
 
-.cen {
+
+/* first style grid */
+
+
+/* Feature Grid */
+
+.features-grid-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 6rem;
+}
+
+
+/* Reverse the position of image and text in second row */
+
+.features-grid-row#second-row {
+    flex-direction: row-reverse;
+}
+
+#first-row .features-grid-row-text {
+    text-align: left;
+}
+
+#second-row .features-grid-row-text {
+    text-align: right;
+}
+
+
+/* .features-grid-row-img {
+    width: 465.5px;
+    aspect-ratio: auto 465.5 / 602.5;
+    height: 100%;
+    size: 0pt;
+} */
+
+
+/* .hardimg {
+    max-width: auto;
+    height: 60%;
+} */
+
+@media screen and (max-width: 768px) {
+    .features-grid-row .w-50 {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        /* align in  center */
+    }
+    .features-grid-row.d-flex-r {
+        flex-direction: column;
+    }
+    .features-grid-row#second-row {
+        flex-direction: column;
+    }
+    #first-row .features-grid-row-text,
+    #second-row .features-grid-row-text {
+        text-align: center;
+    }
+}
+
+
+/* font */
+
+.font-xs {
+    font-size: 1.2rem !important;
+}
+
+.font-x1 {
+    font-size: 1.6rem !important;
+}
+
+.font-x2 {
+    font-size: 2.2rem !important;
+}
+
+.font-x3 {
+    font-size: 3rem !important;
+}
+
+.font-x4 {
+    font-size: 5rem !important;
+}
+
+
+/* meadia queries for font */
+
+@media screen and (max-width:1024px) {
+    .font-xs {
+        font-size: 1rem !important;
+    }
+    .font-x1 {
+        font-size: 1.2rem !important;
+    }
+    .font-x2 {
+        font-size: 1.8rem !important;
+    }
+    .font-x3 {
+        font-size: 2.5rem !important;
+    }
+    .font-x4 {
+        font-size: 4rem !important;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .font-xs {
+        font-size: 0.9rem !important;
+    }
+    .font-x1 {
+        font-size: 1.1rem !important;
+    }
+    .font-x2 {
+        font-size: 1.4rem !important;
+    }
+    .font-x3 {
+        font-size: 2.9rem !important;
+    }
+    .font-x4 {
+        font-size: 3rem !important;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .font-x3 {
+        font-size: 1.3rem !important;
+    }
+}
+
+.heading {
+    margin: 0;
+    line-height: normal;
+}
+
+
+/* Margin */
+
+.m-0 {
+    margin: 0rem !important;
+}
+
+.m-1 {
+    margin: 1rem !important;
+}
+
+.m-2 {
+    margin: 2rem !important;
+}
+
+.m-3 {
+    margin: 3rem !important;
+}
+
+.m-4 {
+    margin: 4rem !important;
+}
+
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.my-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.my-3 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.my-4 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.my-5 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.my-6 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.mx-1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.mx-2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.mx-3 {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.mx-4 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.mx-5 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.mx-6 {
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+
+/* padding */
+
+.p-1 {
+    padding: 1rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.p-3 {
+    padding: 3rem;
+}
+
+.p-4 {
+    padding: 4rem;
+}
+
+.nospace {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none;
+}
+
+
+/* html tags */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    /* font-weight: normal; */
+}
+
+ul {
+    margin: 0;
+}
+
+article,
+figure,
+section {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    color: rgb(224, 42, 42);
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6rem;
+    font-family: Poppins, sans-serif;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: #767676;
+    cursor: pointer;
+}
+
+
+/* General Classes */
+
+.wrapper {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.container {
+    padding: 6rem;
+}
+
+@media screen and (max-width: 1024) {
+    .container {
+        padding: 5rem;
+    }
+}
+
+@media screen and (max-width: 900) {
+    .container {
+        padding: 4rem;
+    }
+}
+
+@media screen and (max-width: 768) {
+    .container {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 640) {
+    .container {
+        padding: 1.5rem;
+    }
+}
+
+
+/* BackGround Color */
+
+.bg-white {
+    background-color: #FFF !important;
+}
+
+.bg-light-pink {
+    background-color: #FCEBF0 !important;
+}
+
+
+/* Width classes */
+
+.w-30 {
+    width: 30%;
+}
+
+.w-40 {
+    width: 30%;
+}
+
+.w-45 {
+    width: 45%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+@media screen and (max-width: 1024px) {
+    .w-70 {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .w-70 {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .w-30 {
+        width: 70%;
+    }
+    .w-40,
+    .w-50,
+    .w-60,
+    .w-70 {
+        width: 90%;
+    }
+}
+
+
+/* Text Classes */
+
+.text-center {
     text-align: center;
-} 
+}
 
-#services .box p {
-    padding: 5%;
-    margin: 15%;
+.text-right {
+    text-align: right;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.text-normal {
+    font-weight: normal;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.text-white {
+    color: #FFF !important;
+}
+
+.text-dark {
+    color: #767676;
+}
+
+.text-pink {
+    counter-reset: #E7507B;
+}
+
+
+/* Flex Property */
+
+
+/* this will align the flex items in different rows under single column */
+
+.d-flex-c {
+    display: flex !important;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Flex Property */
+
+
+/* this will align the flex items in different columns within a single row */
+
+.d-flex-r {
+    display: flex !important;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* Overlay class for adding color effect to pictures */
+
+.overlay {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0, 6) !important;
 }

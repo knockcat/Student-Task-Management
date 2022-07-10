@@ -7,14 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Task Management</title>
     <link rel="stylesheet" href="../Style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Bree+Serif&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- navbar  -->
     <nav>
         <div class="topnav">
             <a class="active" href="#home">Home</a>
-            <a href="#about">About</a>
+            <a href="#front">About</a>
             <a href="#contact">Contact</a>
             <div class="login-container">
                 <form action="/action_page.php">
@@ -26,56 +28,129 @@
         </div>
     </nav>
 
-    <!-- <h1></h1>
+    <!-- first part -->
+    <h1></h1>
     <div class="container">
         <img src="../Images/laptop.jpg" alt="LOADING..." class="center">
         <div class="centered">
             <h1>STUDENT TASK Management</h1>
         </div>
-    </div> -->
+    </div>
 
+    <hr>
 
-    <section id="services-container">
-        <h1 class="h-primary center">Our Services</h1>
+    <!-- second part -->
+    <h1 class="h-primary center">Let's Every Second Count</h1>
+
+    <!-- <section id="front">
         <div id="services">
-            <div class="box">
+            <div class="">
                 <h1 class="h-secondary center">Student Task Management</h1>
                 <p class="cen">Collaborate, manage projects, and reach new productivity peaks. From high rises to the home , the way you works is unique—accomplish it all with us.</p>
 
             </div>
-            <div class="box">
+            <div class="center">
                 <img src="../Images/img1.jpg" alt="">
             </div>
+    </section> -->
+
+    <!-- 2x2 Image-Text Grid-->
+
+    <section class="wrapper bg-light-pink" id="features-grid">
+        <div class="features-grid-container">
+            <!-- title -->
+            <div class="container d-flex-r text-center">
+                <h2 class="title text-black font-x3">Let's Plan Your Schedule
+                </h2>
+            </div>
+
+            <!-- first row  (image -> text)-->
+            <div class="d-flex-r features-grid-row" id="first-row">
+                <!-- first half for image -->
+                <div class="features-grid-row-img w-50 ">
+                    <img src="../Images/inc.jpg" alt="">
+                </div>
+
+                <!-- second half -->
+                <div class="features-grid-row-text w-50">
+                    <div class="m-3">
+                        <h2 class="text-pink font-x2">Homely Atmosphere</h2>
+                        <div>
+                            <p class="text-dark text-justify font-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dignissimos odio ipsum nemo, accusamus expedita eos, quos ut consequatur ducimus aliquam, at in fuga iure tenetur distinctio architecto quaerat amet aliquid doloremque
+                                enim! Quas quaerat amet earum vitae at, enim eos ipsa alias!</p>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-pink">Get in Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- second row  (text -> image)-->
+            <div class="d-flex-r features-grid-row" id="second-row">
+                <!-- second half for image -->
+                <div class="features-grid-row-img w-50">
+                    <img src="../Images/inc.jpg" alt="" class="hardimg">
+                </div>
+
+                <!-- first half -->
+                <div class="features-grid-row-text w-50">
+                    <div class="m-3">
+                        <h2 class="text-pink font-x2">Excellent service</h2>
+                        <div>
+                            <p class="text-dark text-justify font-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dignissimos odio ipsum nemo, accusamus expedita eos, quos ut consequatur ducimus aliquam, at in fuga iure tenetur distinctio architecto quaerat amet aliquid doloremque
+                                enim! Quas quaerat amet earum vitae at, enim eos ipsa alias!</p>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-pink">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    </section id="option-container">
-    <h1 id="cen">Options</h1>
-    <div id="services">
-        <div class="box">
-            <h3 id="cen">Add</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio maiores dicta aliquid modi illo vitae nesciunt beatae repellat temporibus commodi aliquam numquam doloribus, hic sit expedita fugiat voluptatem iste tempora nobis facilis
-                velit? Laboriosam eligendi nostrum minus error nihil.</p>
-        </div>
-        <div class="box">
-            <h3 id="cen">Create</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio maiores dicta aliquid modi illo vitae nesciunt beatae repellat temporibus commodi aliquam numquam doloribus, hic sit expedita fugiat voluptatem iste tempora nobis facilis
-                velit? Laboriosam eligendi nostrum minus error nihil.</p>
-        </div>
-        <div class="box">
-            <h3 id="cen">Delete</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio maiores dicta aliquid modi illo vitae nesciunt beatae repellat temporibus commodi aliquam numquam doloribus, hic sit expedita fugiat voluptatem iste tempora nobis facilis
-                velit? Laboriosam eligendi nostrum minus error nihil.</p>
-        </div>
-    </div>
-    <section>
 
+    <hr>
+    <hr>
+    <!-- third part -->
+    <section id="contact">
+        <h1 class="h-primary cen">Options</h1>
+        <div id="services">
+            <div class="box">
+                <img src="../Images/tag.svg" alt="">
+                <h2 class="h-secondary cen">Add</h2>
+                <p class="cen">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum aliquam ipsa, magni praesentium corporis doloribus animi facere. Debitis maiores, aliquid quis incidunt at ducimus beatae alias quasi atque, itaque provident perspiciatis
+                    quidem laborum officiis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit praesentium accusantium et labore! Placeat atque porro labore ab soluta voluptatibus, totam consectetur!</p>
 
-
-        <footer>
-            <div class="center">
-                Copyright &copy; www.knockcat.com All rights reserved
             </div>
-        </footer>
+            <div class="box">
+                <img src="../Images/compass.svg" alt="">
+                <h2 class="h-secondary cen">Create</h2>
+                <p class="cen">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum aliquam ipsa, magni praesentium corporis doloribus animi facere. Debitis maiores, aliquid quis incidunt at ducimus beatae alias quasi atque, itaque provident perspiciatis
+                    quidem laborum officiis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit praesentium accusantium et labore! Placeat atque porro labore ab soluta voluptatibus, totam consectetur!</p>
+
+            </div>
+            <div class="box">
+                <img src="../Images/solutions.svg" alt="">
+                <h2 class="h-secondary cen">Delete</h2>
+                <p class="cen">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum aliquam ipsa, magni praesentium corporis doloribus animi facere. Debitis maiores, aliquid quis incidunt at ducimus beatae alias quasi atque, itaque provident perspiciatis
+                    quidem laborum officiis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit praesentium accusantium et labore! Placeat atque porro labore ab soluta voluptatibus, totam consectetur!</p>
+
+            </div>
+        </div>
+    </section>
+    <hr>
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="cen">
+            Copyright &copy; www.knockcat.com All rights reserved
+        </div>
+    </footer>
 </body>
 
 </html>
