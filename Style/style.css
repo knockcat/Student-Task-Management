@@ -660,3 +660,141 @@ a {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0, 6) !important;
 }
+
+
+/* Button */
+
+.btn {
+    position: relative;
+    font-weight: 500;
+    border-width: 1px;
+    letter-spacing: normal;
+    margin: 0.4rem 0.8rem;
+    transition-property: background-color, color, border-color, box-shadow;
+    transition-duration: 0.3s, 0.3s, 0.3s, 0.8s;
+    transition-timing-function: ease-in-out;
+    padding: 0.8rem 1.5rem;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+}
+
+.btn:hover,
+btn:focus {
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-pink,
+btn-pink:active {
+    background-color: #E7507B !important;
+    color: #FFF !important;
+    border-color: #E7507B !important;
+}
+
+.btn-pink :hover,
+btn-pink:focus {
+    background-color: #DD1F55 !important;
+    border-color: #DD1F55 !important;
+}
+
+
+/* pulsing effect animation on button hover */
+
+.btn:hover::after,
+.btn:focus::after {
+    content: '';
+    border: 1px solid;
+    border-color: inherit;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    transition: border-radius 0.3s;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    opacity: 1;
+    animation: 1s btn-animation linear infinite;
+}
+
+@keyframes btn-animation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0%;
+    }
+}
+
+
+/* Client Section */
+
+
+/* Clients Section */
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('../Images/img1.jpg');
+    width: 100%;
+    height: 36%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item {
+    padding: 34px;
+}
+
+#clients img {
+    height: 124px;
+}
+
+
+/* Contact Section */
+
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url(../Images/contact-us-2993000_1920.jpg) no-repeat center center/cover;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
