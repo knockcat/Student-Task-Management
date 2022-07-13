@@ -1,3 +1,7 @@
+h1 {
+    text-align: center;
+}
+
 body>table {
     width: 100%;
 }
@@ -31,22 +35,22 @@ table.list thead>tr {
 input[type=text],
 input[type=number] {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 14px 27px;
+    margin: 12px 4px;
+    display: block;
+    border: 3px solid #df8d8d;
+    border-radius: 23px;
     box-sizing: border-box;
 }
 
 input[type=submit] {
     width: 30%;
     background-color: #ddd;
-    color: #000;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
+    color: #9363e1;
+    padding: 16px 18px;
+    margin: 13px 8px;
+    border: 1px solid #9d9dd3;
+    border-radius: 35px;
     cursor: pointer;
 }
 
