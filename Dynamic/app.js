@@ -162,3 +162,5 @@ function validate() {
     }
     return isValid;
 }
+
+// Scroll to Top

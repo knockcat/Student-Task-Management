@@ -857,12 +857,15 @@ btn-pink:focus {
 }
 
 #Social_Icons h1 {
-    font-family: arial;
-    font-size: 70px;
+    font-size: 3.8rem;
     text-align: center;
+    padding: 12px;
     font-weight: bold;
     text-transform: uppercase;
     color: #ff5700;
+    font-size: 3.8rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
 }
 
 .Social-Icons-List {
