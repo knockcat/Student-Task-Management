@@ -836,3 +836,98 @@ btn-pink:focus {
         padding: 4px 8px;
     }
 }
+
+
+/* Icons */
+
+#Social_Sites div {
+    color: rgb(29, 159, 214);
+    display: inline;
+    margin: 10px 12px;
+    padding: 10px 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+#Social_Icons {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 150px;
+}
+
+#Social_Icons h1 {
+    font-family: arial;
+    font-size: 70px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff5700;
+}
+
+.Social-Icons-List {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.Social-Icons-List ul {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.Social-Icons-List ul li {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    background: #f00;
+    border-radius: 100%;
+    margin: 0px 10px;
+}
+
+.Social-Icons-List ul li a {
+    display: block;
+    color: #fff;
+    font-size: 50px;
+}
+
+.Social-Icons-List ul li a i {
+    line-height: 100px;
+}
+
+.Social-Icons-List ul li:nth-child(1) {
+    background: #229ED9;
+}
+
+.Social-Icons-List ul li:nth-child(2) {
+    background: af0606;
+}
+
+.Social-Icons-List ul li:nth-child(3) {
+    background: #0077b5;
+}
+
+.Social-Icons-List ul li:nth-child(4) {
+    background: #e4405f;
+}
+
+.Social-Icons-List ul li:nth-child(5) {
+    background: #1DA1F2
+}
+
+.Social-Icons-List ul li:nth-child(6) {
+    background: #4267B2
+}
+
+.Social-Icons-List ul li:nth-child(7) {
+    background: #171515;
+}
+
+.Social-Icons-List ul li:hover {
+    /* color: #ff5700; */
+    /* border-radius: 0px; */
+    transform: scale(1.3);
+}

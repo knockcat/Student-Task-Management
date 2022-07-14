@@ -29,6 +29,9 @@ function readFormData() {
     formData["age"] = document.getElementById("age").value;
     formData["tasktodone"] = document.getElementById("tasktodone").value;
     formData["message"] = document.getElementById("message").value;
+
+    // storing to local storage
+    // localStorage.setItem("users", JSON.stringify(formData));
     // return Form Data
     return formData;
 }
