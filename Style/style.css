@@ -473,8 +473,12 @@ body {
 a {
     outline: none;
     text-decoration: none;
-    color: #767676;
+    color: red;
     cursor: pointer;
+}
+
+a:hover {
+    color: rgb(49, 166, 217);
 }
 
 
