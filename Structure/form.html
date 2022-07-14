@@ -68,10 +68,17 @@
                         <label class="validation-error hide" id="agevalidationError">This field is required</label>
                         <input type="number" name="age" id="age" placeholder="Enter your Age">
                     </div>
-                    <!-- <div class="form-group">
+                    <div class="form-group">
+                        <label for="name">Enter Tasks To be Done</label>
+                        <label class="validation-error hide" id="taskvalidationError">This field is required</label>
+                        <input type="text" name="tasktodone" id="tasktodone" placeholder="Enter Task">
+                    </div>
+                    <div class="form-group">
                         <label for="name">Message</label>
-                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                    </div> -->
+                        <label class="validation-error hide" id="messagevalidationError">This field is required</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Message"></textarea>
+                        <!-- <input type="text" id="message" placeholder="Enter Message"> -->
+                    </div>
                     <div class="form-action-buttons">
                         <!--Input Button-->
                         <input type="submit" value="Submit">
@@ -93,6 +100,8 @@
                 <th>Class/Standard/Course</th>
                 <th>Total Subjects</th>
                 <th>Age</th>
+                <th>Tasks</th>
+                <th>Message</th>
                 <th>Action</th>
             </tr>
             </thead>

@@ -27,6 +27,8 @@ function readFormData() {
     formData["stdClass"] = document.getElementById("stdClass").value;
     formData["tsub"] = document.getElementById("tsub").value;
     formData["age"] = document.getElementById("age").value;
+    formData["tasktodone"] = document.getElementById("tasktodone").value;
+    formData["message"] = document.getElementById("message").value;
     // return Form Data
     return formData;
 }
@@ -44,8 +46,12 @@ function insertNewRecord(data) {
     cell4.innerHTML = data.tsub;
     cell5 = newRow.insertCell(4);
     cell5.innerHTML = data.age;
-    cell5 = newRow.insertCell(5);
-    cell5.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+    cell6 = newRow.insertCell(5);
+    cell6.innerHTML = data.tasktodone;
+    cell7 = newRow.insertCell(6);
+    cell7.innerHTML = data.message;
+    cell7 = newRow.insertCell(7)
+    cell7.innerHTML = `<a onClick="onEdit(this)">Edit</a>
      <a onClick="onDelete(this)">Delete</a>`;
 }
 // Reset Function
@@ -55,6 +61,8 @@ function resetForm() {
     document.getElementById("stdClass").value = "";
     document.getElementById("tsub").value = "";
     document.getElementById("age").value = "";
+    document.getElementById("tasktodone").value = "";
+    document.getElementById("message").value = "";
     selectedRow = null;
 }
 // Edit Function
@@ -65,6 +73,8 @@ function onEdit(td) {
     document.getElementById("stdClass").value = selectedRow.cells[2].innerHTML;
     document.getElementById("tsub").value = selectedRow.cells[3].innerHTML;
     document.getElementById("age").value = selectedRow.cells[4].innerHTML;
+    document.getElementById("tasktodone").value = selectedRow.cells[5].innerHTML;
+    document.getElementById("message").value = selectedRow.cells[6].innerHTML;
 }
 // Update Record
 function updateRecord(formData) {
@@ -73,6 +83,8 @@ function updateRecord(formData) {
     selectedRow.cells[2].innerHTML = formData.stdClass;
     selectedRow.cells[3].innerHTML = formData.tsub;
     selectedRow.cells[4].innerHTML = formData.age;
+    selectedRow.cells[5].innerHTML = formData.tasktodone;
+    selectedRow.cells[6].innerHTML = formData.message;
 }
 // Delete Function
 function onDelete(td) {
@@ -125,14 +137,24 @@ function validate() {
             document.getElementById("tsubvalidationError").classList.add("hide");
         }
     }
-    // Age validation
-    if (document.getElementById("age").value == "") {
+    // Task validation
+    if (document.getElementById("tasktodone").value == "") {
         isValid = false;
-        document.getElementById("agevalidationError").classList.remove("hide");
+        document.getElementById("taskvalidationError").classList.remove("hide");
     } else {
         isValid = true;
-        if (!document.getElementById("agevalidationError").classList.contains("hide")) {
-            document.getElementById("agevalidationError").classList.add("hide");
+        if (!document.getElementById("taskvalidationError").classList.contains("hide")) {
+            document.getElementById("taskvalidationError").classList.add("hide");
+        }
+    }
+    // Message Validation
+    if (document.getElementById("message").value == "") {
+        isValid = false;
+        document.getElementById("messagevalidationError").classList.remove("hide");
+    } else {
+        isValid = true;
+        if (!document.getElementById("messagevalidationError").classList.contains("hide")) {
+            document.getElementById("messagevalidationError").classList.add("hide");
         }
     }
     return isValid;
