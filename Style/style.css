@@ -949,3 +949,12 @@ btn-pink:focus {
     /* border-radius: 0px; */
     transform: scale(1.3);
 }
+
+
+/* paragraph styling */
+
+.h-tertiary {
+    color: black;
+    font-size: 1.4rem;
+    font-family: 'Roboto Mono', monospace;
+}
