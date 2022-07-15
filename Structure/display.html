@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Records</title>
     <link rel="stylesheet" href="../Style/style-form.css">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Bree+Serif&display=swap" rel="stylesheet">
     <script src="../Dynamic/app.js"></script>
+    <script src="../Dynamic/display.js"></script>
 </head>
 
 <body>
@@ -29,6 +32,13 @@
 
     <h1 class="h-primary cen">Records </h1>
 
+    <form onsubmit="event.preventDefault();onDisplayLocal()();" autocomplete="off">
+        <div class="form-action-buttons">
+            <!--Input Button-->
+            <input type="submit" value="Click To View Records" class="h-secondary cen  btn-pink ">
+        </div>
+    </form>
+
     <section id="display">
         <table class="list" id="stdlist">
             <tr>
@@ -45,7 +55,8 @@
             <!-- Body of table -->
             <div class="cen"></div>
             <tbody>
-
+                <div id="showUsers"></div>
+                </div>
             </tbody>
         </table>
     </section>

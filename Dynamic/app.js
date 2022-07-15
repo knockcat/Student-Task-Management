@@ -30,11 +30,37 @@ function readFormData() {
     formData["tasktodone"] = document.getElementById("tasktodone").value;
     formData["message"] = document.getElementById("message").value;
 
-    // storing to local storage
-    // localStorage.setItem("users", JSON.stringify(formData));
+    saveData(formData);
+
     // return Form Data
     return formData;
 }
+
+// Save data to local Storage
+
+function saveData(formData) {
+    // storing to local storage
+    // array of object
+
+    let user_records = new Array();
+    user_records = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : [];
+
+    user_records.push({
+        "userName": formData["userName"],
+        "rollNo": formData["rollNo"],
+        "stdClass": formData["stdClass"],
+        "tsub": formData["tsub"],
+        "age": formData["age"],
+        "tasktodone": formData["tasktodone"],
+        "message": formData["message"]
+    })
+
+    // storing to local storage
+    localStorage.setItem("users", JSON.stringify(user_records));
+
+    // showData();
+}
+
 // Insert New User Record
 function insertNewRecord(data) {
     var table = document.getElementById("stdlist").getElementsByTagName('tbody')[0];
@@ -162,5 +188,3 @@ function validate() {
     }
     return isValid;
 }
-
-// Scroll to Top
