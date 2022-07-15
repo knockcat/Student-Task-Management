@@ -883,8 +883,8 @@ btn-pink:focus {
 
 .Social-Icons-List ul li {
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     text-align: center;
     background: #f00;
     border-radius: 100%;
@@ -898,7 +898,7 @@ btn-pink:focus {
 }
 
 .Social-Icons-List ul li a i {
-    line-height: 100px;
+    line-height: 84px;
 }
 
 .Social-Icons-List ul li:nth-child(1) {
