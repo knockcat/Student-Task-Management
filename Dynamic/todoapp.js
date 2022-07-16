@@ -5,8 +5,13 @@ window.addEventListener('load', () => {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-
         const task = input.value;
+
+        // Adding to Local Storage
+        var TodoData = {};
+        TodoData["new-task-input"] = document.getElementById("new-task-input").value;
+        // calling save function
+        saveTodoData(TodoData);
 
         const task_el = document.createElement('div');
         task_el.classList.add('task');
@@ -60,3 +65,17 @@ window.addEventListener('load', () => {
         });
     });
 });
+
+function saveTodoData(TodoData) {
+    // storing to local storage
+    // array of object
+
+    let todo_records = new Array();
+    todo_records = JSON.parse(localStorage.getItem("TodoRecord")) ? JSON.parse(localStorage.getItem("TodoRecord")) : [];
+
+    todo_records.push({
+        "new-task-input": TodoData["new-task-input"]
+    });
+    // storing to local storage
+    localStorage.setItem("TodoRecord", JSON.stringify(todo_records));
+}
