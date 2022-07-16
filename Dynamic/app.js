@@ -1,5 +1,11 @@
 var selectedRow = null
 
+// Login Alert
+
+function onLogin() {
+    alert("Ok to Login");
+}
+
 // Form Submit Function
 function onFormSubmit() {
     // check validity
