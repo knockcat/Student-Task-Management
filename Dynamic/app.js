@@ -126,6 +126,7 @@ function onDelete(td) {
     if (confirm('Are you sure to delete this record ?')) {
         row = td.parentElement.parentElement;
         document.getElementById("stdlist").deleteRow(row.rowIndex);
+        // deleteData(index) // delete call
         resetForm();
     }
 }
@@ -193,4 +194,13 @@ function validate() {
         }
     }
     return isValid;
+}
+
+// for deleting from local storage
+function deleteData(index) {
+    let task_records = new Array();
+    task_records = JSON.parse(localStorage.getItem("toDoList")) ? JSON.parse(localStorage.getItem("toDoList")) : []
+    task_records.splice(index, 1)
+    localStorage.setItem("toDoList", JSON.stringify(task_records));
+    this.showData();
 }
