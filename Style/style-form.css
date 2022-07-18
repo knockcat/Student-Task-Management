@@ -196,7 +196,7 @@ a {
 
 html,
 body {
-    color: rgb(224, 42, 42);
+    color: rgb(0, 0, 0);
     font-size: 13px;
     margin: 0;
     padding: 0;
@@ -344,7 +344,7 @@ table.list td {
 
 td,
 th {
-    border: 3px solid #dddddd;
+    border: 3px solid #000000;
     border-radius: 5px;
     /* text-align: left; */
     padding: 8px;
@@ -362,7 +362,7 @@ font-family: 'Sacramento', cursive; */
 
 tr:nth-child(even),
 table.list thead>tr {
-    background-color: skyblue;
+    background-color: rgb(106, 212, 238);
 }
 
 input[type=text],
@@ -404,7 +404,7 @@ a {
 }
 
 label.validation-error {
-    color: rgb(0, 175, 244);
+    color: rgb(255, 0, 0);
     margin-left: 5px;
 }
 
@@ -414,14 +414,21 @@ label.validation-error {
 
 th {
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
     color: black;
+    font-weight: bolder;
+    font-family: 'Bree Serif', serif;
 }
 
 tbody {
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+::placeholder {
+    font-weight: bolder;
 }
 
 
