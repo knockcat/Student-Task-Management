@@ -103,6 +103,7 @@ function resetForm() {
 // Edit Function
 function onEdit(td) {
     selectedRow = td.parentElement.parentElement;
+    restore(selectedRow);
     document.getElementById("userName").value = selectedRow.cells[0].innerHTML;
     document.getElementById("rollNo").value = selectedRow.cells[1].innerHTML;
     document.getElementById("stdClass").value = selectedRow.cells[2].innerHTML;
@@ -126,7 +127,8 @@ function onDelete(td) {
     if (confirm('Are you sure to delete this record ?')) {
         row = td.parentElement.parentElement;
         document.getElementById("stdlist").deleteRow(row.rowIndex);
-        // deleteData(index) // delete call
+        // selectedRow = td.parentElement.parentElement;
+        // restore(selectedRow);
         resetForm();
     }
 }
@@ -197,10 +199,60 @@ function validate() {
 }
 
 // for deleting from local storage
-function deleteData(index) {
-    let task_records = new Array();
-    task_records = JSON.parse(localStorage.getItem("toDoList")) ? JSON.parse(localStorage.getItem("toDoList")) : []
-    task_records.splice(index, 1)
-    localStorage.setItem("toDoList", JSON.stringify(task_records));
-    this.showData();
+// function deleteData(index) {
+//     let task_records = new Array();
+//     task_records = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
+//     task_records.splice(index, 1)
+//     localStorage.setItem("users", JSON.stringify(task_records));
+//     this.showData();
+// }
+
+// deleteItem(i) {
+//     localStorage.removeItem(i);
+//     localStorage.setItem(i, JSON.stringify(this.items));
+//     this.items.splice(i, 1);
+// }
+
+function restore(selectedRow) {
+    var ind = selectedRow.rowIndex;
+    console.log(selectedRow);
+    console.log(ind);
+    // document.getElementById("showUsers").innerHTML = "";
+    let re_records = new Array();
+    re_records = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
+    if (re_records) {
+        for (let i = 0; i < re_records.length; i++) {
+
+            if (i == ind - 1)
+                continue;
+            var formData = {};
+            formData["userName"] = re_records[i].userName;
+            formData["rollNo"] = re_records[i].rollNo;
+            formData["stdClass"] = re_records[i].stdClass;
+            formData["tsub"] = re_records[i].tsub;
+            formData["age"] = re_records[i].age;
+            formData["tasktodone"] = re_records[i].tasktodone;
+            formData["message"] = re_records[i].message;
+
+            let restore_records = new Array();
+            restore_records = JSON.parse(localStorage.getItem("reusers")) ? JSON.parse(localStorage.getItem("reusers")) : [];
+
+            restore_records.push({
+                "userName": formData["userName"],
+                "rollNo": formData["rollNo"],
+                "stdClass": formData["stdClass"],
+                "tsub": formData["tsub"],
+                "age": formData["age"],
+                "tasktodone": formData["tasktodone"],
+                "message": formData["message"]
+            })
+
+            // storing to local storage
+            localStorage.setItem("reusers", JSON.stringify(restore_records));
+        }
+
+        localStorage.users = localStorage.reusers;
+        localStorage.removeItem("reusers");
+    }
+
 }
